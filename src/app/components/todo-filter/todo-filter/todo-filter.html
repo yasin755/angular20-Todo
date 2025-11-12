@@ -1,0 +1,27 @@
+<section
+  class="flex gap-2 mt-3 mb-3 rounded-xl border border-zinc-800 bg-gray-900/60 p-3"
+>
+<ng-container *ngIf="filter$ | async as filter">
+  <button
+    class="btn"
+    [ngClass]="filter === 'all' ? 'btn-primary text-white-400' : 'text-zinc-400'"
+    (click)="onSetFilter('all')"
+  >
+    All
+  </button>
+  <button
+    class="btn"
+    [ngClass]="filter === 'active' ? 'btn-primary text-white-400' : 'text-zinc-400'"
+    (click)="onSetFilter('active')"
+  >
+    Active
+  </button>
+  <button
+    class="btn"
+    [ngClass]="filter === 'completed' ? 'btn-primary text-white-400' : 'text-zinc-400'"
+    (click)="onSetFilter('completed')"
+  >
+    Completed
+  </button>
+</ng-container>
+</section>
